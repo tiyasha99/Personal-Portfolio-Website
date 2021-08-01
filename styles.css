@@ -68,7 +68,7 @@ html{
 
 /* menu button styling*/
 .menu-btn{
-  color: #fff;
+  color: #333;
   font-size: 23px;
   cursor: pointer;
   display: none;
@@ -93,7 +93,7 @@ html{
   transition: all 0.3s ease;
 }
 .scroll-up-btn.show{
-  buttom:30px;
+  bottom:30px;
   opacity: 1;
   pointer-events: auto;
 }
@@ -139,7 +139,7 @@ html{
 }
 
 /*Similar content styling code*/
-.about, .edu, .skills, .projects, .contact, footer{
+.about, .edu, .skills, .project, .contact, footer{
   font-family: 'Poppins', sans-serif;
 }
 .about .about-content, .edu .edu-content, .skills .skills-content, .projects .project-content, .contact .contact-content{
@@ -231,7 +231,7 @@ section .title::after{
 }
 
 /*Education Section Styling*/
-.edu{
+.edu, .project {
   background: #111;
   color: #fff;
 }
@@ -345,50 +345,7 @@ section .title::after{
   width: 70%;
 }
 
-/*Project section Styling*/
-.projects .title::after{
-  content: "my work";
-  background: #111;
-}
-.projects{
-  background: #111;
-  color: #fff;
-}
-.projects .title::before{
-  background: #fff;
-}
-.projects .project-content .card{
-  width: calc(33% - 20px);
-  background: #222;
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.projects .project-content .card:hover{
-  background: rgb(139, 221, 16);
-}
-.projects .project-content .card:hover i{
- color:  #fff;
- transition: all 0.3s ease;
-}
-.projects .project-content .card .box{
-  transition: all 0.3s ease;
-}
-.projects .project-content .card:hover .box{
-  transform: scale(1.05);
-}
-.projects .project-content .card i{
-  padding-bottom: 5%;
-  font-size: 300%;
-  color: rgb(139, 221, 16);
-}
-.projects .project-content .card .text{
-  font-size: 25px;
-  font-weight: 500;
-  margin:10px 0 7px 0;
-}
+
 
 /* contact section styling*/
 .contact .title::after{
@@ -590,6 +547,76 @@ footer span{
   }
  
 }
+
+/* proje.project section styling */
+.project .title::before{
+  background: #fff;
+}
+
+.project .title::after{
+  content: "work done";
+  background: #111;
+}
+.project .carousel .card{
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.project .carousel .card:hover{
+  background: rgb(139, 221, 16);
+}
+.project .carousel .card .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.project .carousel .card:hover .box{
+  transform: scale(1.05);
+}
+.project .carousel .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.project .carousel .card img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgb(139, 221, 16);
+  transition: all 0.3s ease;
+}
+.project .carousel .card:hover img{
+  border-color: #fff;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid rgb(139, 221, 16)!important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: rgb(139, 221, 16)!important;
+}
+
+
 
 @media (max-width: 690px){
   .max-width{
